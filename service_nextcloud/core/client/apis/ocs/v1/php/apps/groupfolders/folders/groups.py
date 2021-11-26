@@ -18,12 +18,12 @@ class GroupsAPI(BaseClientAPI):
     """ Groups接口类 """
 
     def set_permissions(self, group_folder_id: int, group_name, **kwargs) -> t.Dict[t.Text, t.Any]:
-        """ 设置文件夹对应人员分组权限
+        """ 设置组文件夹对应组权限
 
         data = {'permissions': 31}
 
-        :param group_folder_id: 群组文件夹ID
-        :param group_name: 群组名称, 唯一标识
+        :param group_folder_id: 组文件夹id
+        :param group_name: 组名称, 唯一标识
         :param kwargs: 请求参数
         :return: t.Dict[t.Text, t.Any]
         """

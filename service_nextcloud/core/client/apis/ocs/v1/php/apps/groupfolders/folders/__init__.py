@@ -22,7 +22,7 @@ class FoldersAPI(BaseClientAPI):
     groups = GroupsAPI()
 
     def list(self, **kwargs) -> t.Dict[t.Text, t.Any]:
-        """ 列出所有文件夹
+        """ 列出所有组文件夹
 
         :param kwargs: 请求参数
         :return: t.Dict[t.Text, t.Any]
@@ -37,11 +37,11 @@ class FoldersAPI(BaseClientAPI):
         return dict_data['ocs']['data']
 
     def set_quota(self, group_folder_id: int, **kwargs) -> t.Dict[t.Text, t.Any]:
-        """ 设置文件夹配额
+        """ 设置组文件夹配额
 
         data = {'quota': 0}
 
-        :param group_folder_id: 群组文件夹ID
+        :param group_folder_id: 组文件夹id
         :return: t.Dict[t.Text, t.Any]
         """
         url = f'{self._base_url}/apps/groupfolders/folders/{group_folder_id}/quota'

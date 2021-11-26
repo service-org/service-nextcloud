@@ -11,7 +11,7 @@ from urllib.parse import urlencode
 from service_green.core.green import urllib3
 from service_client.core.client import BaseClient
 
-from .apis.ocs import OcsAPI
+from .apis.apps import AppsAPI
 
 logger = getLogger(__name__)
 
@@ -22,7 +22,7 @@ class NextCloudClient(BaseClient):
     doc: https://github.com/matejak/nextcloud-API
     """
 
-    ocs = OcsAPI()
+    apps = AppsAPI()
 
     def __init__(self, username: t.Text, password: t.Text, **kwargs: t.Any) -> None:
         """ 初始化实例
